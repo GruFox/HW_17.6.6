@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW_17._6._6;
 
-public class Account
+public class Account : IAccount
 {
     // тип учетной записи
     public string Type { get; set; }
@@ -16,4 +16,9 @@ public class Account
 
     // процентная ставка
     public double Interest { get; set; }
+
+    public void Calculation(ICalculator calculate)
+    {
+        calculate.Calculation(this);
+    }
 }

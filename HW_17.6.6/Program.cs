@@ -4,6 +4,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        IAccount account = new Account() { Type = "Обычный", Balance = 100 };
+
+        account.Calculation(new CalculateInterest());
     }
 }
